@@ -1,0 +1,1 @@
+import{c as e,d as t}from"./app-X8eStG7m.js";var n=t(e(),1);function r(e){if(!e)return e;let t=String(e);return/[\u09E6-\u09EF]/.test(t)?t.split(/([\u09E6-\u09EF]+)/g).map((e,t)=>/^[\u09E6-\u09EF]+$/.test(e)?n.createElement(`span`,{key:t,className:`font-bengali-digits`},e):e):e}export{r as t};

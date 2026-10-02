@@ -1,0 +1,1 @@
+import{o as e,t}from"./app-lVCsqyjz.js";var n=t();function r({className:t=``,...r}){let{site_settings:i}=e().props;return(0,n.jsx)(`img`,{src:i?.logo_path||`/images/bgc-logo.png`,alt:i?.site_name||`Bogura Golf Club`,...r,className:`object-contain ${t}`})}export{r as t};

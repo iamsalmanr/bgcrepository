@@ -1,0 +1,1 @@
+This is a test file to verify that user uploads are successfully synced across to the remote server via Git.

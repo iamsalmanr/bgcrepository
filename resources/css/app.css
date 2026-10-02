@@ -1,0 +1,257 @@
+@import tw-animate-css;
+@import "./../../node_modules/shadcn/dist/tailwind.css";
+@import "@fontsource-variable/geist";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   Anton - Bold Condensed Display Typography (Self-Hosted)
+   ========================================================================== */
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url('/fonts/anton/anton-regular.woff2') format('woff2'),
+       url('/fonts/anton/anton-regular.ttf') format('truetype'),
+       url('https://fonts.gstatic.com/s/anton/v27/1Ptgg87LROyAm0K0.ttf') format('truetype');
+}
+
+.font-anton {
+  font-family: 'Anton', sans-serif !important;
+  letter-spacing: -0.025em;
+}
+
+/* ==========================================================================
+   Hind Siliguri - Premium Modern Bengali Typography (Self-Hosted)
+   ========================================================================== */
+@font-face {
+  font-family: 'Hind Siliguri';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/hind-siliguri/hind-siliguri-400.ttf') format('truetype'),
+       url('https://fonts.gstatic.com/s/hindsiliguri/v14/ijwTs5juQtsyLLR5jN4cxBEofJs.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Hind Siliguri';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/hind-siliguri/hind-siliguri-500.ttf') format('truetype'),
+       url('https://fonts.gstatic.com/s/hindsiliguri/v14/ijwOs5juQtsyLLR5jN4cxBEoRG_54uE.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Hind Siliguri';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/hind-siliguri/hind-siliguri-600.ttf') format('truetype'),
+       url('https://fonts.gstatic.com/s/hindsiliguri/v14/ijwOs5juQtsyLLR5jN4cxBEoREP-4uE.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Hind Siliguri';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/hind-siliguri/hind-siliguri-700.ttf') format('truetype'),
+       url('https://fonts.gstatic.com/s/hindsiliguri/v14/ijwOs5juQtsyLLR5jN4cxBEoRCf_4uE.ttf') format('truetype');
+}
+
+/* ==========================================================================
+   Noto Sans Bengali Local - Self-hosted font for Regular Bengali Digits & Text
+   ========================================================================== */
+@font-face {
+  font-family: 'Noto Sans Bengali Local';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/noto-sans-bengali/noto-sans-bengali.woff2') format('woff2');
+}
+
+/* ==========================================================================
+   Tiro Bangla - Self-hosted & Cached Local Font Definitions (Bengali Range Only)
+   Note: Bengali Digits U+09E6-09EF are excluded so digits seamlessly use
+   clean, regular, standard Bengali font (Hind Siliguri / Noto Sans Bengali)
+   ========================================================================== */
+/* Bengali Subset (Normal) */
+@font-face {
+  font-family: 'Tiro Bangla';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/tiro-bangla/tiro-bangla-bengali-400-normal.woff2') format('woff2');
+  unicode-range: U+0951-0952, U+0964-0965, U+0980-09E5, U+09F0-09FE, U+1CD0, U+1CD2, U+1CD5-1CD6, U+1CD8, U+1CE1, U+1CEA, U+1CED, U+1CF2, U+1CF5-1CF7, U+200C-200D, U+20B9, U+25CC, U+A8F1;
+}
+
+/* Bengali Subset (Italic) */
+@font-face {
+  font-family: 'Tiro Bangla';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/tiro-bangla/tiro-bangla-bengali-400-italic.woff2') format('woff2');
+  unicode-range: U+0951-0952, U+0964-0965, U+0980-09E5, U+09F0-09FE, U+1CD0, U+1CD2, U+1CD5-1CD6, U+1CD8, U+1CE1, U+1CEA, U+1CED, U+1CF2, U+1CF5-1CF7, U+200C-200D, U+20B9, U+25CC, U+A8F1;
+}
+
+@layer base {
+  .theme {
+    --font-heading: Outfit, Plus Jakarta Sans, "Hind Siliguri", "Noto Sans Bengali", -apple-system, BlinkMacSystemFont, SF Pro Display, SF Pro Text, Helvetica Neue, Helvetica, Arial, sans-serif;
+    --font-sans: Plus Jakarta Sans, Inter, "Hind Siliguri", "Noto Sans Bengali", -apple-system, BlinkMacSystemFont, SF Pro Text, SF Pro Display, Helvetica Neue, Helvetica, Arial, sans-serif;
+  }
+
+  body {
+    font-family: Plus Jakarta Sans, Inter, "Hind Siliguri", "Noto Sans Bengali", -apple-system, BlinkMacSystemFont, SF Pro Text, SF Pro Display, Helvetica Neue, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Universal Bengali styling for smooth, elegant rendering */
+  .font-bangla, [lang="bn"], :lang(bn) {
+    font-family: 'Hind Siliguri', 'Noto Sans Bengali', 'SolaimanLipi', sans-serif !important;
+    letter-spacing: 0 !important;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :root {
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.145 0 0);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.145 0 0);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.145 0 0);
+    --primary: oklch(0.205 0 0);
+    --primary-foreground: oklch(0.985 0 0);
+    --secondary: oklch(0.97 0 0);
+    --secondary-foreground: oklch(0.205 0 0);
+    --muted: oklch(0.97 0 0);
+    --muted-foreground: oklch(0.556 0 0);
+    --accent: oklch(0.97 0 0);
+    --accent-foreground: oklch(0.205 0 0);
+    --destructive: oklch(0.577 0.245 27.325);
+    --border: oklch(0.922 0 0);
+    --input: oklch(0.922 0 0);
+    --ring: oklch(0.708 0 0);
+    --chart-1: oklch(0.87 0 0);
+    --chart-2: oklch(0.556 0 0);
+    --chart-3: oklch(0.439 0 0);
+    --chart-4: oklch(0.371 0 0);
+    --chart-5: oklch(0.269 0 0);
+    --radius: 0.625rem;
+    --sidebar: oklch(0.985 0 0);
+    --sidebar-foreground: oklch(0.145 0 0);
+    --sidebar-primary: oklch(0.205 0 0);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.97 0 0);
+    --sidebar-accent-foreground: oklch(0.205 0 0);
+    --sidebar-border: oklch(0.922 0 0);
+    --sidebar-ring: oklch(0.708 0 0);
+  }
+  .dark {
+    --background: oklch(0.145 0 0);
+    --foreground: oklch(0.985 0 0);
+    --card: oklch(0.205 0 0);
+    --card-foreground: oklch(0.985 0 0);
+    --popover: oklch(0.205 0 0);
+    --popover-foreground: oklch(0.985 0 0);
+    --primary: oklch(0.922 0 0);
+    --primary-foreground: oklch(0.205 0 0);
+    --secondary: oklch(0.269 0 0);
+    --secondary-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.269 0 0);
+    --muted-foreground: oklch(0.708 0 0);
+    --accent: oklch(0.269 0 0);
+    --accent-foreground: oklch(0.985 0 0);
+    --destructive: oklch(0.396 0.141 25.723);
+    --destructive-foreground: oklch(0.637 0.237 25.331);
+    --border: oklch(0.269 0 0);
+    --input: oklch(0.269 0 0);
+    --ring: oklch(0.439 0 0);
+    --chart-1: oklch(0.488 0.243 264.376);
+    --chart-2: oklch(0.696 0.17 162.48);
+    --chart-3: oklch(0.769 0.188 70.08);
+    --chart-4: oklch(0.627 0.265 303.9);
+    --chart-5: oklch(0.645 0.246 16.439);
+    --sidebar: oklch(0.205 0 0);
+    --sidebar-foreground: oklch(0.985 0 0);
+    --sidebar-primary: oklch(0.488 0.243 264.376);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.269 0 0);
+    --sidebar-accent-foreground: oklch(0.985 0 0);
+    --sidebar-border: oklch(0.269 0 0);
+    --sidebar-ring: oklch(0.439 0 0);
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--border, #e2e8f0);
+  }
+}
+
+@layer utilities {
+  .font-bengali-digits {
+    font-family: 'Noto Sans Bengali Local', 'Noto Sans Bengali', 'SolaimanLipi', 'Kalpurush', 'Vrinda', sans-serif !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em;
+  }
+
+  .font-bangla,
+  .font-tiro {
+    font-family: 'Tiro Bangla', 'Noto Sans Bengali Local', 'Hind Siliguri', 'Noto Sans Bengali', 'SolaimanLipi', 'Kalpurush', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  }
+
+  @keyframes notice-slide {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes marquee-scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-notice-slide {
+    display: inline-block;
+    white-space: nowrap;
+    animation: notice-slide 22s linear infinite;
+    will-change: transform;
+  }
+
+  .animate-marquee-smooth {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: marquee-scroll 24s linear infinite;
+    will-change: transform;
+  }
+
+  .animate-notice-slide:hover,
+  .animate-notice-slide:active,
+  .animate-marquee-smooth:hover,
+  .animate-marquee-smooth:active {
+    animation-play-state: paused;
+  }
+
+  /* Hide scrollbar utility for mobile pill tabs & horizontal navigation */
+  .no-scrollbar::-webkit-scrollbar,
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+  .no-scrollbar,
+  .scrollbar-hide {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+  }
+}
